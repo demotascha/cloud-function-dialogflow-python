@@ -178,7 +178,7 @@ def handle_location_message(event):
     carousel_template_message = TemplateSendMessage(
         alt_text='選出最近的三個飲水機資訊給你',
         template=CarouselTemplate(
-            columns=cc
+            columns=columns
         )
     )
     line_bot_api.reply_message(
