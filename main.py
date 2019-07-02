@@ -130,7 +130,7 @@ def handle_location_message(event):
             TextSendMessage(text=msg))
         exit()
 
-    columns=[]
+    columnObjs=[]
     for location in hits['hits']:
         # 使用 Google distance_matrix 取得距離
         destination = (location['_geoloc']["lat"], location['_geoloc']["lng"])
@@ -172,13 +172,13 @@ def handle_location_message(event):
             ]
         )
         # 加入 list
-        columns.append(column)
+        columnObjs.append(column)
 
     # 回覆使用 Carousel Template
     carousel_template_message = TemplateSendMessage(
         alt_text='選出最近的三個飲水機資訊給你',
         template=CarouselTemplate(
-            columns=columns
+            columns=columnObjs
         )
     )
     line_bot_api.reply_message(
