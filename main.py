@@ -167,7 +167,7 @@ def handle_location_message(event):
                 ),
                 URIAction(
                     label='CALL電話', 
-                    uri=str('tel:+8862' + contact)
+                    uri=str('tel:' + contact)
                 )
             ]
         )
