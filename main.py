@@ -153,7 +153,7 @@ def handle_location_message(event):
         )
         # 建立 CarouselColumn obj
         column = CarouselColumn(
-            thumbnail_image_url='https://drive.google.com/thumbnail?id=1cPNUZiIZ0J-zsIfvYQpS2ELUSzVHQM0U',
+            thumbnail_image_url='https://drive.google.com/uc?export=view&id=1cPNUZiIZ0J-zsIfvYQpS2ELUSzVHQM0U',
             title=location['place_name'] + ' ' + location["place"],
             text=details,
             actions=[
