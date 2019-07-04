@@ -153,7 +153,7 @@ def handle_location_message(event):
         )
         # 建立 CarouselColumn obj
         column = CarouselColumn(
-            thumbnail_image_url='https://drive.google.com/thumbnail?id=1KZKx6UNzb7XiTClIIcwNBCHlbKxYFSf-',
+            thumbnail_image_url='https://drive.google.com/thumbnail?id=1cPNUZiIZ0J-zsIfvYQpS2ELUSzVHQM0U',
             title=location['place_name'] + ' ' + location["place"],
             text=details,
             actions=[
@@ -188,7 +188,3 @@ def handle_location_message(event):
             carousel_template_message)
     except:
         print(str(columnObjs))
-        msg = "抱歉，此地點資料有誤，無法提供相關飲水資訊"
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=msg))
