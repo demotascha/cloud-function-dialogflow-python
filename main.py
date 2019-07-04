@@ -181,6 +181,14 @@ def handle_location_message(event):
             columns=columnObjs
         )
     )
-    line_bot_api.reply_message(
-        event.reply_token,
-        carousel_template_message)
+
+    try:
+        line_bot_api.reply_message(
+            event.reply_token,
+            carousel_template_message)
+    except:
+        print(str(columnObjs))
+        msg = "抱歉，此地點資料有誤，無法提供相關飲水資訊"
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=msg))
